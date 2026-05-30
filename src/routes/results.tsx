@@ -153,7 +153,10 @@ function ResultsPage() {
                     </div>
                     <a
                       href="#"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpenFix(v.title);
+                      }}
                       className="shrink-0 text-[13px] font-medium text-primary transition-colors hover:opacity-80"
                     >
                       View fix →
