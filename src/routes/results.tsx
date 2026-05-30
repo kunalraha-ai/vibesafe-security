@@ -213,6 +213,11 @@ function ResultsPage() {
           </div>
         </div>
       </main>
+      <FixModal
+        open={openFix !== null}
+        onClose={() => setOpenFix(null)}
+        title={openFix ?? ""}
+      />
     </div>
   );
 }
