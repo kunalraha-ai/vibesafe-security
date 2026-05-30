@@ -78,6 +78,7 @@ function SeverityBadge({ severity }: { severity: string }) {
 }
 
 function ResultsPage() {
+  const [openFix, setOpenFix] = useState<string | null>(null);
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
