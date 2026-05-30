@@ -57,6 +57,19 @@
   --destructive-foreground: oklch(1 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.39 0.193 277);
+
+  /* Severity badge colors */
+  --severity-critical: #DC2626;
+  --severity-critical-bg: #FEF2F2;
+  --severity-high: #D97706;
+  --severity-high-bg: #FFFBEB;
+  --severity-medium: #2563EB;
+  --severity-medium-bg: #EFF6FF;
+  --severity-low: #71717A;
+  --severity-low-bg: #F4F4F5;
+
+  /* Utility */
+  --muted-slate: #3F3F46;
 }
 
 @layer base {
