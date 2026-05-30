@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
+import FixModal from "../components/FixModal";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
@@ -76,6 +78,7 @@ function SeverityBadge({ severity }: { severity: string }) {
 }
 
 function ResultsPage() {
+  const [openFix, setOpenFix] = useState<string | null>(null);
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -150,7 +153,10 @@ function ResultsPage() {
                     </div>
                     <a
                       href="#"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpenFix(v.title);
+                      }}
                       className="shrink-0 text-[13px] font-medium text-primary transition-colors hover:opacity-80"
                     >
                       View fix →
@@ -207,6 +213,11 @@ function ResultsPage() {
           </div>
         </div>
       </main>
+      <FixModal
+        open={openFix !== null}
+        onClose={() => setOpenFix(null)}
+        title={openFix ?? ""}
+      />
     </div>
   );
 }
