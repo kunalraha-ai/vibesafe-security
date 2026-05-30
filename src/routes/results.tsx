@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
+import FixModal from "../components/FixModal";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
