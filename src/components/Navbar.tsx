@@ -10,21 +10,8 @@ export default function Navbar() {
         <Link to="/" className="text-[15px] font-semibold tracking-tight text-foreground">
           VibeSafe
         </Link>
-        <nav className="hidden items-center gap-8 md:flex">
-          {["How it works", "Pricing", "Docs"].map((l) => (
-            <a
-              key={l}
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="text-[13px] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {l}
-            </a>
-          ))}
-        </nav>
         <div className="flex items-center gap-2">
           {!isLoaded ? (
-            // Skeleton to prevent layout shift while Clerk loads
             <div className="h-7 w-24 animate-pulse rounded-md bg-[var(--color-surface)]" />
           ) : isSignedIn ? (
             <>

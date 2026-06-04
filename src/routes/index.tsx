@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-// ── Policy Modal ─────────────────────────────────────────────────────────────
+// ── Policy Modal ──────────────────────────────────────────────────────────────
 
 type PolicyType = "privacy" | "terms" | "refund" | null;
 
@@ -53,12 +53,10 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
       body: (
         <div className="space-y-5 text-[14px] leading-relaxed text-foreground">
           <p className="text-muted-foreground">Effective date: {EFFECTIVE_DATE}</p>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">1. Who We Are</h3>
             <p>{COMPANY} ("we", "us", "our") operates {WEBSITE}. We provide security scanning services for software repositories and live web applications. For any privacy-related questions, contact us at <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a>.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">2. Information We Collect</h3>
             <p className="mb-2">We collect the following categories of information:</p>
@@ -71,7 +69,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li><strong>Technical data:</strong> IP address, browser type, and request logs retained for up to 30 days for security and rate-limiting purposes.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">3. How We Use Your Information</h3>
             <ul className="list-disc space-y-1 pl-5">
@@ -82,7 +79,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>To investigate abuse, security incidents, and fraud.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">4. Repository and Code Data</h3>
             <p>When you scan a GitHub repository or upload a ZIP, we clone or extract the code into a temporary working directory on our servers. This data is:</p>
@@ -94,12 +90,10 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
             </ul>
             <p className="mt-2">Scan results (findings, summaries, metadata) are retained in our database for 30 days to allow you to access your reports, after which they are automatically deleted.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">5. AI Processing</h3>
             <p>We use Azure OpenAI to triage and enrich vulnerability findings. Code snippets (surrounding context around a finding, typically 10–20 lines) may be sent to Azure OpenAI's API. Microsoft's data processing terms apply to this data. We do not send full repository contents to any AI provider.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">6. Third-Party Services</h3>
             <ul className="list-disc space-y-1 pl-5">
@@ -111,7 +105,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
             </ul>
             <p className="mt-2">Each provider operates under their own privacy policy and data processing agreements. We enter into Data Processing Agreements with all providers who handle personal data.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">7. Data Retention</h3>
             <ul className="list-disc space-y-1 pl-5">
@@ -121,22 +114,18 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>Payment records: retained as required by applicable tax and financial regulations (typically 7 years).</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">8. Your Rights</h3>
             <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or export your personal data, or to object to certain processing. To exercise these rights, email <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a>. We will respond within 30 days.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">9. Cookies</h3>
             <p>We use only strictly necessary cookies for authentication session management via Clerk. We do not use advertising or tracking cookies.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">10. Changes to This Policy</h3>
             <p>We may update this Privacy Policy. Material changes will be notified via email to registered users. Continued use of VibeSafe after changes constitutes acceptance.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">11. Contact</h3>
             <p>Privacy questions: <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a></p>
@@ -144,23 +133,19 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
         </div>
       ),
     },
-
     terms: {
       title: "Terms of Service",
       body: (
         <div className="space-y-5 text-[14px] leading-relaxed text-foreground">
           <p className="text-muted-foreground">Effective date: {EFFECTIVE_DATE}</p>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">1. Agreement</h3>
             <p>By creating a {COMPANY} account or using our services at {WEBSITE}, you agree to these Terms of Service ("Terms"). If you do not agree, do not use {COMPANY}. These Terms form a legally binding agreement between you and {COMPANY}.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">2. Description of Service</h3>
             <p>{COMPANY} provides automated security scanning for software repositories and live web applications ("Service"). Scans detect vulnerabilities including but not limited to: hardcoded secrets, injection flaws, misconfigured security headers, exposed files, and insecure authentication patterns. Results are informational and do not constitute professional security consulting or penetration testing.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">3. Eligibility and Accounts</h3>
             <ul className="list-disc space-y-1 pl-5">
@@ -171,7 +156,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>One account per individual or organisation; creating multiple accounts to circumvent free-tier limits is prohibited.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">4. Permitted Use</h3>
             <p className="mb-2">You may only use {COMPANY} to scan repositories and URLs that you own or have explicit written authorisation to test. Specifically, you represent and warrant that:</p>
@@ -181,7 +165,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>You will not use {COMPANY} to scan third-party systems without authorisation, which may violate the Computer Fraud and Abuse Act (US), Computer Misuse Act (UK), or equivalent laws in your jurisdiction.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">5. Prohibited Conduct</h3>
             <p>You must not:</p>
@@ -195,7 +178,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>Use the Service for any unlawful purpose.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">6. Subscription Plans and Billing</h3>
             <p className="mb-2">We offer the following plans:</p>
@@ -206,37 +188,30 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
             </ul>
             <p className="mt-2">Subscriptions auto-renew monthly. You may cancel at any time; cancellation takes effect at the end of the current billing period. Price changes will be communicated at least 14 days in advance.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">7. Disclaimer of Warranties</h3>
             <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND. {COMPANY.toUpperCase()} DOES NOT WARRANT THAT THE SERVICE IS ERROR-FREE, COMPLETE, OR THAT ALL VULNERABILITIES IN YOUR CODE WILL BE DETECTED. SECURITY SCANNING IS INHERENTLY PROBABILISTIC. YOU SHOULD NOT RELY SOLELY ON {COMPANY.toUpperCase()} OUTPUT AS YOUR SOLE SECURITY MEASURE.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">8. Limitation of Liability</h3>
             <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, {COMPANY.toUpperCase()} SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICE, INCLUDING BUT NOT LIMITED TO SECURITY BREACHES, DATA LOSS, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">9. Intellectual Property</h3>
             <p>{COMPANY} and its scan engine, AI models, report templates, and UI are proprietary to {COMPANY}. Your code and scan results belong to you. You grant {COMPANY} a limited licence to process your code and URLs solely for the purpose of providing the Service.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">10. Termination</h3>
             <p>We may suspend or terminate your account at any time for violation of these Terms, fraudulent activity, or abuse of the Service. You may delete your account at any time by contacting <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a>.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">11. Governing Law</h3>
             <p>These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts of India.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">12. Changes to Terms</h3>
             <p>We may update these Terms. Continued use after changes constitutes acceptance. Material changes will be communicated via email at least 14 days in advance.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">13. Contact</h3>
             <p>For any questions about these Terms: <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a></p>
@@ -244,18 +219,15 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
         </div>
       ),
     },
-
     refund: {
       title: "Refund Policy",
       body: (
         <div className="space-y-5 text-[14px] leading-relaxed text-foreground">
           <p className="text-muted-foreground">Effective date: {EFFECTIVE_DATE}</p>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">1. Overview</h3>
             <p>{COMPANY} processes all payments via <strong>DodoPayments</strong>, a global payment infrastructure provider. This Refund Policy governs refunds for Pro and Team subscriptions purchased through {WEBSITE}. By purchasing a subscription, you agree to the terms below.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">2. Eligibility for Refund</h3>
             <p className="mb-2">You are eligible for a full refund if <strong>all</strong> of the following conditions are met:</p>
@@ -265,30 +237,26 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>This is your first refund request for your account.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">3. No Refund After Half Usage</h3>
             <p>If you have consumed <strong>50% or more</strong> of your monthly scan entitlement for the billing period in question, no refund will be issued, regardless of when the request is made. This threshold exists because substantial value of the subscription has already been delivered.</p>
             <p className="mt-2">Example: If you are on the Pro plan and have run 50 or more scans in a billing month, you are not eligible for a refund for that month.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">4. No Refund After 7 Days</h3>
             <p>Refund requests submitted more than <strong>7 calendar days</strong> after the purchase or renewal date will not be processed, regardless of usage. Subscription fees are charged for access to the service during the billing period, not solely for scans conducted.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">5. DodoPayments Processing</h3>
             <p className="mb-2">All payment transactions are processed by <strong>DodoPayments</strong>. The following terms from DodoPayments apply to all transactions on {COMPANY}:</p>
             <ul className="list-disc space-y-1 pl-5">
               <li>Payments are processed securely via DodoPayments' PCI-DSS compliant infrastructure. {COMPANY} does not store your card details.</li>
-              <li>Approved refunds will be credited to your original payment method within <strong>5–10 business days</strong>, depending on your bank or card issuer. DodoPayments does not guarantee a specific processing timeline beyond initiating the refund promptly.</li>
+              <li>Approved refunds will be credited to your original payment method within <strong>5–10 business days</strong>, depending on your bank or card issuer.</li>
               <li>Currency conversion fees or foreign transaction fees charged by your bank are not refundable by {COMPANY} or DodoPayments.</li>
-              <li>In the event of a payment dispute or chargeback initiated with your bank, {COMPANY} reserves the right to suspend your account pending resolution. We encourage contacting us first at <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a> before initiating a chargeback, as disputes can delay resolution significantly.</li>
+              <li>In the event of a payment dispute or chargeback initiated with your bank, {COMPANY} reserves the right to suspend your account pending resolution. We encourage contacting us first at <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a> before initiating a chargeback.</li>
               <li>Refunds for payments made in currencies other than the original charge currency may be subject to exchange rate differences at the time of refund processing.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">6. Non-Refundable Situations</h3>
             <p>The following are explicitly non-refundable:</p>
@@ -296,11 +264,10 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
               <li>Requests made after 7 days from the charge date.</li>
               <li>Accounts that have used 50% or more of their scan quota for the period.</li>
               <li>Cases where the account has been suspended or terminated for Terms of Service violations.</li>
-              <li>Partial-month usage after a mid-period plan cancellation (cancellation takes effect at end of billing period).</li>
+              <li>Partial-month usage after a mid-period plan cancellation.</li>
               <li>Free plan — there are no charges on the Free plan, so no refunds apply.</li>
             </ul>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">7. How to Request a Refund</h3>
             <p>To request a refund, email <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a> with the subject line <strong>"Refund Request — [your email]"</strong> and include:</p>
@@ -311,12 +278,10 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
             </ul>
             <p className="mt-2">We will review your request and respond within <strong>3 business days</strong>. If eligible, the refund will be initiated via DodoPayments within 2 business days of approval.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">8. Exceptions</h3>
-            <p>In exceptional circumstances (e.g., extended service outages affecting your ability to use scans during a billing period), we may issue partial credits or refunds at our sole discretion, even outside the standard policy. Contact <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a> to discuss.</p>
+            <p>In exceptional circumstances (e.g., extended service outages), we may issue partial credits or refunds at our sole discretion. Contact <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a> to discuss.</p>
           </section>
-
           <section>
             <h3 className="mb-2 font-semibold text-foreground">9. Contact</h3>
             <p>For all refund requests and billing questions: <a href={`mailto:${EMAIL}`} className="text-primary underline">{EMAIL}</a></p>
@@ -338,7 +303,6 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
         onClick={(e) => e.stopPropagation()}
         className="flex max-h-[85vh] w-full max-w-[720px] flex-col overflow-hidden rounded-xl border border-border bg-background shadow-2xl"
       >
-        {/* Header */}
         <div className="flex shrink-0 items-center justify-between border-b border-border px-6 py-4">
           <div>
             <p className="text-[11px] font-medium uppercase tracking-widest text-muted-foreground">VibeSafe</p>
@@ -354,13 +318,7 @@ function PolicyModal({ type, onClose }: { type: PolicyType; onClose: () => void 
             </svg>
           </button>
         </div>
-
-        {/* Scrollable body */}
-        <div className="overflow-y-auto px-6 py-5">
-          {body}
-        </div>
-
-        {/* Footer */}
+        <div className="overflow-y-auto px-6 py-5">{body}</div>
         <div className="shrink-0 border-t border-border px-6 py-3">
           <p className="text-[12px] text-muted-foreground">
             Questions? Email <a href="mailto:kunal@omniprocure.in" className="text-primary underline">kunal@omniprocure.in</a>
@@ -434,9 +392,9 @@ function Hero() {
   }
 
   const MODES = [
-    { key: "repo" as const,  label: "GitHub repo",  desc: "Static analysis + AI + secrets scanning" },
-    { key: "live" as const,  label: "Live URL",     desc: "Headers, exposed files, CORS, cookies" },
-    { key: "both" as const,  label: "Both",         desc: "Full scan + IDOR dynamic testing" },
+    { key: "repo" as const, label: "GitHub repo", desc: "Static analysis + AI + secrets scanning" },
+    { key: "live" as const, label: "Live URL",    desc: "Headers, exposed files, CORS, cookies" },
+    { key: "both" as const, label: "Both",        desc: "Full scan + IDOR dynamic testing" },
   ];
 
   return (
@@ -452,7 +410,6 @@ function Hero() {
           {MODES.find(m => m.key === mode)?.desc}
         </p>
 
-        {/* Mode toggle */}
         <div className="mx-auto mt-7 inline-flex rounded-md border border-border bg-[var(--color-surface)] p-0.5">
           {MODES.map((m) => (
             <button
@@ -527,11 +484,8 @@ function Hero() {
         </form>
 
         {error && (
-          <p className="mx-auto mt-3 max-w-xl text-[13px] text-[var(--severity-critical)]">
-            {error}
-          </p>
+          <p className="mx-auto mt-3 max-w-xl text-[13px] text-[var(--severity-critical)]">{error}</p>
         )}
-
         {mode === "both" && (
           <p className="mx-auto mt-2 max-w-xl text-[12px] text-muted-foreground">
             Clones your repo for static analysis, then probes your live URL for IDOR and auth bypass vulnerabilities.
@@ -545,10 +499,10 @@ function Hero() {
 // ── Stats ─────────────────────────────────────────────────────────────────────
 
 const STATS = [
-  { n: "62%", l: "of AI-generated code has vulnerabilities" },
+  { n: "62%",   l: "of AI-generated code has vulnerabilities" },
   { n: "10.3%", l: "of Lovable apps had critical RLS flaws" },
   { n: "2.74x", l: "more vulns in vibe code vs human code" },
-  { n: "60%", l: "of new code will be AI-generated by end of 2026" },
+  { n: "60%",   l: "of new code will be AI-generated by end of 2026" },
 ];
 
 function Stats() {
@@ -557,15 +511,176 @@ function Stats() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {STATS.map((s) => (
-            <div
-              key={s.n}
-              className="rounded-md border border-border bg-[var(--color-surface)] p-6"
-            >
+            <div key={s.n} className="rounded-md border border-border bg-[var(--color-surface)] p-6">
               <div className="text-[28px] font-semibold leading-none text-foreground">{s.n}</div>
               <div className="mt-3 text-[13px] leading-snug text-muted-foreground">{s.l}</div>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Vuln Breakdown ────────────────────────────────────────────────────────────
+
+type VulnSeverity = "critical" | "high" | "medium";
+
+interface VulnCard {
+  severity: VulnSeverity;
+  rank: string;
+  title: string;
+  stat: string;
+  statLabel: string;
+  body: string;
+  catches: string;
+}
+
+const SEVERITY_STYLES: Record<VulnSeverity, { badge: string; bar: string }> = {
+  critical: {
+    badge: "text-[var(--severity-critical)] bg-[var(--severity-critical-bg)]",
+    bar: "border-l-[var(--severity-critical)]",
+  },
+  high: {
+    badge: "text-[var(--severity-high)] bg-[var(--severity-high-bg)]",
+    bar: "border-l-[var(--severity-high)]",
+  },
+  medium: {
+    badge: "text-[var(--severity-medium)] bg-[var(--severity-medium-bg)]",
+    bar: "border-l-[var(--severity-medium)]",
+  },
+};
+
+const WEBSITE_VULNS: VulnCard[] = [
+  {
+    severity: "high",
+    rank: "#1 Web Vuln",
+    title: "Cross-Site Scripting (XSS)",
+    stat: "2,570",
+    statLabel: "instances across 500 pentests in 2024",
+    body: "The single most common web app finding for 5+ years running. Vibe-coded frontends skip input sanitisation by default — AI-generated JS trusts user data and renders it straight into the DOM.",
+    catches: "Detects dangerouslySetInnerHTML and eval() usage",
+  },
+  {
+    severity: "high",
+    rank: "#2 Web Vuln",
+    title: "Security Misconfiguration",
+    stat: "20–25%",
+    statLabel: "of all web app vulnerabilities",
+    body: "A single Jira misconfiguration in Feb 2025 exposed internal data from hundreds of Fortune 500 companies. Lovable and Bolt apps routinely ship with open CORS, debug endpoints, and exposed admin panels.",
+    catches: "Scans headers, CORS policy, exposed paths, and admin panels",
+  },
+  {
+    severity: "medium",
+    rank: "#3 Web Vuln",
+    title: "Broken Access Control",
+    stat: "15–20%",
+    statLabel: "of web app vulnerabilities",
+    body: "Extremely common in AI-generated backends where auth middleware gets skipped or applied inconsistently across routes. Exposes business-critical APIs to unauthorised access and data manipulation.",
+    catches: "Flags unprotected routes and missing auth middleware",
+  },
+];
+
+const REPO_VULNS: VulnCard[] = [
+  {
+    severity: "critical",
+    rank: "#1 Repo Vuln",
+    title: "Hardcoded Secrets",
+    stat: "29M",
+    statLabel: "secrets leaked on GitHub in 2025 (+34% YoY)",
+    body: "The largest single-year increase ever recorded. AI-assisted commits leak secrets at roughly double the GitHub-wide baseline — keys, tokens, and DB credentials committed straight into repos.",
+    catches: "Scans 25+ secret patterns — AWS, Stripe, GitHub PATs, DB URIs, and more",
+  },
+  {
+    severity: "high",
+    rank: "#2 Repo Vuln",
+    title: "Vulnerable Dependencies",
+    stat: "1-in-1",
+    statLabel: "apps has at least one high/critical dependency vuln",
+    body: "AI codegen tools pin whatever library version they were trained on — often months or years out of date. Unpatched components contribute to the majority of real-world data breaches.",
+    catches: "Identifies outdated packages and known CVEs in your dependency tree",
+  },
+  {
+    severity: "critical",
+    rank: "#3 Repo Vuln",
+    title: "Secrets in Private Repos",
+    stat: "35%",
+    statLabel: "of private repos contain plaintext secrets",
+    body: "AWS IAM keys appear 5× more often in private repos than public ones. Hardcoded passwords are 3× more frequent. The \"it's private\" assumption is dangerously wrong — especially after a 2024 incident where Cursor sent .env files to its servers for tab completion.",
+    catches: "Scans private repos with the same rigour as public ones",
+  },
+];
+
+function VulnCardItem({ card }: { card: VulnCard }) {
+  const styles = SEVERITY_STYLES[card.severity];
+  return (
+    <div className={`flex flex-col rounded-md border border-border border-l-2 bg-[var(--color-surface)] p-5 ${styles.bar}`}>
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-[11px] font-medium text-muted-foreground">{card.rank}</span>
+        <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${styles.badge}`}>
+          {card.severity}
+        </span>
+      </div>
+      <h3 className="mt-2 text-[15px] font-semibold text-foreground">{card.title}</h3>
+      <div className="mt-3">
+        <span className="text-[26px] font-semibold leading-none text-foreground">{card.stat}</span>
+        <span className="ml-2 text-[12px] text-muted-foreground">{card.statLabel}</span>
+      </div>
+      <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">{card.body}</p>
+      <div className="mt-4 flex items-center gap-1.5 border-t border-border pt-3">
+        <svg className="h-3 w-3 shrink-0 text-primary" viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd" d="M16.704 5.296a1 1 0 010 1.408l-8 8a1 1 0 01-1.408 0l-4-4a1 1 0 011.408-1.408L8 12.592l7.296-7.296a1 1 0 011.408 0z" clipRule="evenodd" />
+        </svg>
+        <span className="text-[12px] text-primary">{card.catches}</span>
+      </div>
+    </div>
+  );
+}
+
+function VulnBreakdown() {
+  return (
+    <section className="border-b border-border bg-background">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+
+        {/* Section header */}
+        <div className="mb-2 flex items-center gap-2">
+          <span className="h-px flex-1 bg-border" />
+          <span className="text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
+            Data from thousands of repos &amp; sites scanned with VibeSafe
+          </span>
+          <span className="h-px flex-1 bg-border" />
+        </div>
+        <div className="mb-10 text-center">
+          <h2 className="mt-4 text-[28px] font-semibold tracking-tight text-foreground">
+            What we keep finding
+          </h2>
+          <p className="mt-2 text-[14px] text-muted-foreground">
+            These aren't theoretical — they're the actual vulnerabilities showing up in vibe-coded apps, ranked by frequency.
+          </p>
+        </div>
+
+        {/* Website vulns */}
+        <div className="mb-3">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="text-[12px] font-semibold uppercase tracking-widest text-muted-foreground">🌐 Website vulnerabilities</span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {WEBSITE_VULNS.map((c) => <VulnCardItem key={c.title} card={c} />)}
+          </div>
+        </div>
+
+        {/* Repo vulns */}
+        <div className="mt-10">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="text-[12px] font-semibold uppercase tracking-widest text-muted-foreground">📁 Repository vulnerabilities</span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {REPO_VULNS.map((c) => <VulnCardItem key={c.title} card={c} />)}
+          </div>
+        </div>
+
       </div>
     </section>
   );
@@ -640,28 +755,14 @@ function Pricing() {
               )}
               <h3 className="text-[15px] font-semibold text-foreground">{p.name}</h3>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-[32px] font-semibold leading-none text-foreground">
-                  {p.price}
-                </span>
+                <span className="text-[32px] font-semibold leading-none text-foreground">{p.price}</span>
                 <span className="text-[13px] text-muted-foreground">{p.per}</span>
               </div>
               <ul className="mt-6 space-y-2.5">
                 {p.features.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-2 text-[13px] text-foreground"
-                  >
-                    <svg
-                      className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.704 5.296a1 1 0 010 1.408l-8 8a1 1 0 01-1.408 0l-4-4a1 1 0 011.408-1.408L8 12.592l7.296-7.296a1 1 0 011.408 0z"
-                        clipRule="evenodd"
-                      />
+                  <li key={f} className="flex items-start gap-2 text-[13px] text-foreground">
+                    <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                      <path fillRule="evenodd" d="M16.704 5.296a1 1 0 010 1.408l-8 8a1 1 0 01-1.408 0l-4-4a1 1 0 011.408-1.408L8 12.592l7.296-7.296a1 1 0 011.408 0z" clipRule="evenodd" />
                     </svg>
                     {f}
                   </li>
@@ -729,6 +830,7 @@ function Landing() {
       <main>
         <Hero />
         <Stats />
+        <VulnBreakdown />
         <Pricing />
       </main>
       <Footer onPolicy={setActivePolicy} />
